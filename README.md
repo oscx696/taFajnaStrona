@@ -1,15 +1,14 @@
-<h2>Librus 💸</h2>
+<input type="text" id="nick" placeholder="Wpisz nazwę">
 
-<div>
-    <label for="nick">Nazwa:</label>
-    <input type="text" id="nick" placeholder="Wpisz nazwę">
-</div>
+<p id="wynik"></p>
 
 <script>
-document.getElementById("nick").addEventListener("keydown", function(event) {
-    if (event.key === "Enter") {
+const input = document.getElementById("nick");
+const wynik = document.getElementById("wynik");
 
-        this.value = this.value
+input.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        wynik.textContent = this.value
             .replaceAll("1", "1️⃣")
             .replaceAll("2", "2️⃣")
             .replaceAll("3", "3️⃣")
