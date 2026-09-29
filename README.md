@@ -7,24 +7,14 @@
 
 <script>
 setInterval(() => {
-    const element = document.getElementById("nick");
+    const input = document.getElementById("nick");
 
-    if (element.textContent.includes("1")) {
-        element.textContent = element.textContent.replaceAll("1", "1️⃣");
-    }
-  if (element.textContent.includes("2")) {
-        element.textContent = element.textContent.replaceAll("2", "1️2️⃣");
-    }
-  if (element.textContent.includes("3")) {
-        element.textContent = element.textContent.replaceAll("3", "1️3️⃣");
-    }
-  if (element.textContent.includes("4")) {
-        element.textContent = element.textContent.replaceAll("4", "1️4️⃣");
-    
-    }
-  if (element.textContent.includes("5")) {
-        element.textContent = element.textContent.replaceAll("5", "1️5️⃣");
-    }
+    input.value = input.value
+        .replaceAll("1", "1️⃣")
+        .replaceAll("2", "2️⃣")
+        .replaceAll("3", "3️⃣")
+        .replaceAll("4", "4️⃣")
+        .replaceAll("5", "5️⃣");
+
 }, 1000);
 </script>
-
