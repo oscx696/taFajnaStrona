@@ -1,12 +1,9 @@
-<!DOCTYPE html>
-<html lang="pl">
-<head>
-    <meta charset="UTF-8">
-    <title>Moja strona</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <h1>Witaj na mojej stronie!</h1>
-    <p>Ta strona została napisana przeze mnie.</p>
-</body>
-</html>
+<h2>Fajny obrazek!</h2>
+
+<img src="obrazek.jpg" width="300">
+
+<br><br>
+
+<button onclick="addLike()">
+    👍 <span id="likes">0</span>
+</button>
