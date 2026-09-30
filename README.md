@@ -1,19 +1,26 @@
-<input type="text" id="nick" placeholder="Wpisz nazwę">
+<p2> "Policz groszowki" </p2>
+
+<div>
+    <input type="text" id="liczby" placeholder="Wpisz liczby">
+    <button id="dodaj">➜</button>
+</div>
 
 <p id="wynik"></p>
 
 <script>
-const input = document.getElementById("nick");
-const wynik = document.getElementById("wynik");
+document.getElementById("dodaj").addEventListener("click", function() {
+    const tekst = document.getElementById("liczby").value;
 
-input.addEventListener("keydown", function(event) {
-    if (event.key === "Enter") {
-        wynik.textContent = this.value
-            .replaceAll("1", "1️⃣")
-            .replaceAll("2", "2️⃣")
-            .replaceAll("3", "3️⃣")
-            .replaceAll("4", "4️⃣")
-            .replaceAll("5", "5️⃣");
+    let suma = 0;
+
+    for (const znak of tekst) {
+        if (znak === "1") suma += 0.1;
+        if (znak === "2") suma += 0.2;
+        if (znak === "3") suma += 0.3;
+        if (znak === "4") suma += 0.4;
+        if (znak === "5") suma += 0.5;
     }
+
+    document.getElementById("wynik").textContent = suma;
 });
 </script>
